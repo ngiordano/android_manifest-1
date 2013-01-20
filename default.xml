@@ -391,5 +391,5 @@
 
   <project path="packages/wallpapers/SwagPapers" name="RootBox_wallpapers" remote="rootbox" revision="jb-mr1" />
 
-  <project path="platform_manifest" name="platform_manifest" remote="rootbox" revision="jb-mr1" />
+  <project path="platform_manifest" name="android_manifest" remote="tp" revision="master" />
 </manifest>
