@@ -1,2 +1,2 @@
-$ repo init -u git@github.com/icslover/android_manifest.git -b master
+$ repo init -u git@github.com/icslover/android_manifest.git -b xylon
 $ repo sync
