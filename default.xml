@@ -15,14 +15,14 @@
            fetch="https://github.com/AOKP/" />
 
   <remote  name="private"
-           fetch="ssh://git@github.com" />
+           fetch="https://github.com" />
 
-  <default revision="refs/heads/cm-10.1"
+  <default revision="refs/tags/cm-10.1-M1"
            remote="github"
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="CyanogenMod/android_build">
+  <project path="build" name="icslover/android_build" revision="xylon">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -33,7 +33,7 @@
   <project path="bootable/diskinstaller" name="CyanogenMod/android_bootable_diskinstaller" />
   <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" />
   <project path="cts" name="platform/cts" remote="aosp" revision="jb-mr1-release" />
-  <project path="dalvik" name="CyanogenMod/android_dalvik" />
+  <project path="dalvik" name="dalvik" remote="xy" revision="jellybean" />
   <project path="development" name="CyanogenMod/android_development" />
   <project path="device/common" name="CyanogenMod/android_device_common" />
   <project path="device/generic/armv7-a-neon" name="CyanogenMod/android_device_generic_armv7-a-neon" />
@@ -45,6 +45,8 @@
   <project path="device/google/accessory/arduino" name="CyanogenMod/android_device_google_accessory_arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="CyanogenMod/android_device_google_accessory_demokit" groups="device" />
   <project path="device/sample" name="CyanogenMod/android_device_sample" groups="device" />
+  <project path="device/samsung/aries-common" name="CyanogenMod/android_device_samsung_aries-common" groups="device" />
+  <project path="device/samsung/vibrantmtd" name="CyanogenMod/android_device_samsung_vibrantmtd" revision="cm-10.1" />
   <project path="device/ti/panda" name="CyanogenMod/android_device_ti_panda" groups="device" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" remote="aosp" revision="jb-mr1-release" />
   <project path="external/aac" name="CyanogenMod/android_external_aac" />
@@ -67,7 +69,7 @@
   <project path="external/busybox" name="CyanogenMod/android_external_busybox" />
   <project path="external/bzip2" name="CyanogenMod/android_external_bzip2" />
   <project path="external/checkpolicy" name="CyanogenMod/android_external_checkpolicy" />
-  <project path="external/chromium" name="CyanogenMod/android_external_chromium" />
+  <project path="external/chromium" name="external_chromium" remote="xy" revision="jellybean" />
   <project path="external/chromium-trace" name="CyanogenMod/android_external_chromium-trace" />
   <project path="external/cibu-fonts" name="CyanogenMod/android_external_cibu-fonts" />
   <project path="external/clang" name="CyanogenMod/android_external_clang" />
@@ -186,7 +188,7 @@
   <project path="external/rsync" name="CyanogenMod/android_external_rsync" />
   <project path="external/safe-iop" name="CyanogenMod/android_external_safe-iop" />
   <project path="external/sepolicy" name="CyanogenMod/android_external_sepolicy" />
-  <project path="external/skia" name="CyanogenMod/android_external_skia" />
+  <project path="external/skia" name="external_skia" remote="xy" revision="jellybean" />
   <project path="external/smali" name="CyanogenMod/android_external_smali" />
   <project path="external/sonivox" name="CyanogenMod/android_external_sonivox" />
   <project path="external/speex" name="CyanogenMod/android_external_speex" />
@@ -203,7 +205,7 @@
   <project path="external/tinyxml" name="CyanogenMod/android_external_tinyxml" />
   <project path="external/tinyxml2" name="CyanogenMod/android_external_tinyxml2" />
   <project path="external/tremolo" name="CyanogenMod/android_external_tremolo" />
-  <project path="external/v8" name="CyanogenMod/android_external_v8" />
+  <project path="external/v8" name="external_v8" remote="xy" revision="jellybean" />
   <project path="external/valgrind" name="CyanogenMod/android_external_valgrind" />
   <project path="external/vim" name="CyanogenMod/android_external_vim" />
   <project path="external/webkit" name="CyanogenMod/android_external_webkit" />
@@ -216,7 +218,7 @@
   <project path="external/yaffs2" name="CyanogenMod/android_external_yaffs2" />
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" />
   <project path="external/zxing" name="CyanogenMod/android_external_zxing" />
-  <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" />
+  <project path="frameworks/av" name="frameworks_av" remote="xy" revision="jb-mr1" />
   <project path="frameworks/base" name="frameworks_base" remote="xy" revision="jellybean" />
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" />
   <project path="frameworks/compile/linkloader" name="CyanogenMod/android_frameworks_compile_linkloader" />
@@ -226,7 +228,7 @@
   <project path="frameworks/ex" name="CyanogenMod/android_frameworks_ex" />
   <project path="frameworks/mff" name="CyanogenMod/android_frameworks_mff" />
   <project path="frameworks/ml" name="CyanogenMod/android_frameworks_ml" />
-  <project path="frameworks/native" name="CyanogenMod/android_frameworks_native" />
+  <project path="frameworks/native" name="frameworks_native" remote="xy" revision="jb-mr1" />
   <project path="frameworks/opt/calendar" name="CyanogenMod/android_frameworks_opt_calendar" />
   <project path="frameworks/opt/carddav" name="CyanogenMod/android_frameworks_opt_carddav" />
   <project path="frameworks/opt/emoji" name="CyanogenMod/android_frameworks_opt_emoji" />
@@ -234,9 +236,9 @@
   <project path="frameworks/opt/mailcommon" name="CyanogenMod/android_frameworks_opt_mailcommon" />
   <project path="frameworks/opt/mms" name="CyanogenMod/android_frameworks_opt_mms" />
   <project path="frameworks/opt/photoviewer" name="CyanogenMod/android_frameworks_opt_photoviewer" />
-  <project path="frameworks/opt/telephony" name="CyanogenMod/android_frameworks_opt_telephony" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="xy" revision="jellybean" />
   <project path="frameworks/opt/vcard" name="CyanogenMod/android_frameworks_opt_vcard" />
-  <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" />
+  <project path="frameworks/rs" name="frameworks_rs" remote="xy" revision="jellybean" />
   <project path="frameworks/support" name="CyanogenMod/android_frameworks_support" />
   <project path="frameworks/testing" name="CyanogenMod/android_frameworks_testing" />
   <project path="frameworks/wilhelm" name="CyanogenMod/android_frameworks_wilhelm" />
@@ -261,12 +263,14 @@
   <project path="hardware/qcom/sensors" name="CyanogenMod/android_hardware_qcom_sensors" />
   <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" />
   <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
+  <project path="hardware/samsung" name="CyanogenMod/android_hardware_samsung" />
   <project path="hardware/samsung_slsi/exynos5" name="CyanogenMod/android_hardware_samsung_slsi_exynos5" />
   <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
-  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
+  <project path="hardware/ti/omap4xxx" name="hardware_ti_omap4xxx" remote="xy" revision="jellybean" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
   <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" />
-  <project path="libcore" name="CyanogenMod/android_libcore" />
+  <project path="kernel/samsung/aries" name="CyanogenMod/android_kernel_samsung_aries" />
+  <project path="libcore" name="libcore" remote="xy" revision="jellybean" />
   <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" />
   <project path="ndk" name="platform/ndk" remote="aosp" revision="jb-mr1-release" />
   <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
@@ -278,11 +282,11 @@
   <project path="packages/apps/Camera" name="packages_apps_Camera" remote="xy" revision="jb4.2" />
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" />
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
-  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
   <project path="packages/apps/CMFileManager" name="packages_apps_CMFileManager" remote="xy" revision="cm-10.1" />
   <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="xy" revision="jellybean" />
-  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="xy" revision="jellybean" />
+  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
+  <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="aokp" revision="jb-mr1" />
   <project path="packages/apps/DSPManager" name="CyanogenMod/android_packages_apps_DSPManager" />
   <project path="packages/apps/Email" name="CyanogenMod/android_packages_apps_Email" />
   <project path="packages/apps/Exchange" name="CyanogenMod/android_packages_apps_Exchange" />
@@ -302,11 +306,11 @@
   <project path="packages/apps/Protips" name="CyanogenMod/android_packages_apps_Protips" />
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
   <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
+  <project path="packages/apps/SamsungServiceMode" name="CyanogenMod/android_packages_apps_SamsungServiceMode" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="xy" revision="jellybean" />
   <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="packages_apps_SoundRecorder" remote="xy" revision="jellybean" />
   <project path="packages/apps/SpareParts" name="CyanogenMod/android_packages_apps_SpareParts" />
-  <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" />
+  <project path="packages/apps/SoundRecorder" name="packages_apps_SoundRecorder" remote="xy" revision="jellybean" />
   <project path="packages/apps/Stk" name="CyanogenMod/android_packages_apps_Stk" />
   <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" />
   <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
@@ -371,7 +375,7 @@
   <project path="system/extras" name="CyanogenMod/android_system_extras" />
   <project path="system/media" name="CyanogenMod/android_system_media" />
   <project path="system/netd" name="CyanogenMod/android_system_netd" />
-  <project path="system/security" name="CyanogenMod/android_system_security" />
+  <project path="system/security" name="system_security" remote="xy" revision="jellybean" />
   <project path="system/su" name="CyanogenMod/android_system_su" />
   <project path="system/vold" name="system_vold" remote="aokp" revision="jb-mr1" />
   <project path="tools/build" name="platform/tools/build" remote="aosp" revision="jb-mr1-release" />
@@ -383,4 +387,5 @@
   <project path="vendor/tmobile/providers/ThemeManager" name="android_vendor_tmobile_providers_ThemeManager" remote="xy" revision="cm-10.1" />
   <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" />
   <project path="vendor/tmobile/themes/SnapBlack" name="vendor-tmobile-themes-SnapBlack" remote="xy" revision="jellybean" />
+  <project path="platform_manifest" name="icslover/android_manifest"  revision="xylon" />
 </manifest>
