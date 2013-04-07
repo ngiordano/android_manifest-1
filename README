@@ -1,2 +1,2 @@
-$ repo init -u git://github.com/icslover/android_manifest.git -b xylon
+$ repo init -u git://github.com/ngiordano/android_manifest-1.git -b xylon
 $ repo sync
