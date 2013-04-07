@@ -38,7 +38,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <project path="build" name="ngiordano/platform_build" remote="pub" revision="jb-mr1" />
+  <project path="build" name="ngiordano/platform_build" remote="pub" revision="jb-mr1">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
